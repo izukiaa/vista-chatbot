@@ -1,0 +1,24 @@
+[project]
+name = "vista-chatbot"
+version = "0.1.0"
+description = "Local RAG Minecraft wiki chatbot for Minescript"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "sentence-transformers>=2.7.0",
+  "transformers>=4.43.0",
+  "torch>=2.1.0",
+  "peft>=0.11.0",
+  "accelerate>=0.30.0",
+  "fastapi>=0.111.0",
+  "uvicorn>=0.30.0",
+]
+
+[project.optional-dependencies]
+quant = ["bitsandbytes>=0.43.0"]
+dev = ["pytest>=8.0.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
